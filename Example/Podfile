@@ -1,0 +1,7 @@
+pod "libgit2-iOS", :path => "../"
+
+target "Demo" do
+end
+
+target "DemoTests" do
+end
