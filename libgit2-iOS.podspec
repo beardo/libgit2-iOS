@@ -33,7 +33,7 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
                           #xcodebuild
                         #CMD
   s.header_mappings_dir = 'git2/'
-  s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib'
+  #s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib'
   #s.source_files = 'libgit2/src/'
   #s.resources = 'Assets/*.png'
 
