@@ -24,8 +24,15 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
   # s.osx.deployment_target = '10.7'
   s.requires_arc = true
 
-  s.prepare_command = 'mkdir -p libgit2/build && cd libgit2/build && cmake .. -DBUILD_SHARED_LIBS=OFF && make'
-  s.vendored_libraries = 'libgit2/build/libgit2.a'
+  s.prepare_command = <<-CMD
+                          mkdir -p libgit2/build
+                          cd libgit2/build
+                          echo $PWD
+                          cmake -DCMAKE_TOOLCHAIN_FILE=../../toolchain/ios7_xcode.cmake\
+                                -DCMAKE_SIZEOF_VOID_P=4 -GXcode ..
+                          xcodebuild
+                        CMD
+  s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib'
   #s.source_files = 'libgit2/build/'
   #s.resources = 'Assets/*.png'
 

@@ -14,7 +14,7 @@ set(CMAKE_CXX_COMPILER "${IOS_DEVELOPER_ROOT}/usr/bin/clang++"  CACHE PATH "C++ 
 # Not sure of a good way to automatically find this information
 set(IOS_SDK_VERSION "7")
 set(IOS_TARGET "iPhoneOS")
-set(IOS_ARCH "armv7")
+set(IOS_ARCH "i386")
 set(CMAKE_OSX_ARCHITECTURES "${IOS_ARCH}" CACHE STRING "SDK Architecture" FORCE)
 
 find_program(CMAKE_XCODE_SELECT xcode-select)
