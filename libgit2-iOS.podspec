@@ -25,6 +25,8 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
   s.requires_arc = true
 
   s.prepare_command = <<-CMD
+                          rm -f libgit2/include/git2/inttypes.h
+                          rm -f libgit2/include/git2/stdint.h
                           rm -rf libgit2/tests
                         CMD
   s.libraries = 'z'
