@@ -27,13 +27,15 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
   s.prepare_command = <<-CMD
                           rm -f libgit2/include/git2/inttypes.h
                           rm -f libgit2/include/git2/stdint.h
+                          rm -rf libgit2/src/win32
+                          rm -rf libgit2/deps/regex/
                           rm -rf libgit2/tests
                         CMD
   s.libraries = 'z'
-  s.source_files = 'libgit2/**/*'
+  s.header_mappings_dir = 'libgit2/*'
+  s.source_files = 'libgit2/**/*.c'
   #s.private_header_files = 'libgit2/src/**/*.h'
   s.public_header_files = 'libgit2/**/*.h'
-  s.header_mappings_dir = 'libgit2/**/'
   #s.header_dir = 'libgit2/**/*.h'
   #s.xcconfig = { 'USER_HEADER_SEARCH_PATHS' => '"$(PODS_ROOT)"/libgit2/include' }
 
