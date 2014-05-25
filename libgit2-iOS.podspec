@@ -29,5 +29,7 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
                           cmake -DCMAKE_TOOLCHAIN_FILE=../toolchain/ios7_xcode.cmake -DCMAKE_SIZEOF_VOID_P=4 -GXcode ..
                           xcodebuild
                         CMD
+  s.header_mappings_dir = 'libgit2/include/**/'
+  s.public_header_files = 'libgit2/include/**/*.h'
   s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib'
 end
