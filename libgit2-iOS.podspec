@@ -24,6 +24,9 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
   s.requires_arc = true
 
   s.prepare_command = <<-CMD
+                          rm -rf libgit2/include/git2/inttypes.h
+                          rm -rf libgit2/include/git2/stdint.h
+                          rm -rf libgit2/src/win32
                           mkdir -p libgit2/build
                           cd libgit2/build
                           cmake -DCMAKE_TOOLCHAIN_FILE=../toolchain/ios7_xcode.cmake -DCMAKE_SIZEOF_VOID_P=4 -GXcode ..
