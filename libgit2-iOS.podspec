@@ -6,7 +6,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = "libgit2-iOS"
-  s.version          = "0.0.1"
+  s.version          = "0.0.2"
   s.summary          = "Attempt to get libgit2 to build as a cocoapod"
   s.description      = <<-DESC
                         Attempt to get libgit2 to build as a cocoapod.
@@ -31,8 +31,9 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
                           cd libgit2/build
                           cmake -DCMAKE_TOOLCHAIN_FILE=../toolchain/ios7_xcode.cmake -DCMAKE_SIZEOF_VOID_P=4 -GXcode ..
                           xcodebuild
+                          xcodebuild install
                         CMD
   s.header_mappings_dir = 'libgit2/include/**/'
-  s.public_header_files = 'libgit2/include/**/*.h'
-  s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib'
+  s.public_header_files = 'libgit2/include/**/*.h', 'Headers/*.h'
+  s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib', 'libgit2/Libraries/*'
 end
