@@ -34,6 +34,6 @@ s.homepage           = "https://github.com/beardo/libgit2-iOS"
                           xcodebuild install
                         CMD
   s.header_mappings_dir = 'libgit2/include/**/'
-  s.public_header_files = 'libgit2/include/**/*.h', 'Headers/*.h'
-  s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib', 'libgit2/Libraries/*'
+  s.public_header_files = 'libgit2/include/**/*.h'
+  s.vendored_libraries = 'libgit2/build/Debug/libgit2.dylib'
 end
